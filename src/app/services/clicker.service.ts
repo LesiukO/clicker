@@ -15,6 +15,10 @@ export class ClickerService {
     this.count++;
   }
 
+  resetCount() {
+    this.count = 0;
+  }
+
   getCount() {
     return this.count;
   }

@@ -23,6 +23,7 @@ export class PlayRouteComponent implements OnInit {
   ngOnInit(): void {
     this.time = 10;
     // this.count = 0;
+    this.clicker.resetCount();
     this.isStarted = false;
   }
 
