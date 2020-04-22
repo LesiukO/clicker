@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="game">
+    <h2>{{auth.getUsername()}} your result is <strong>{{clicker.getCount()}}</strong></h2>
+    <hr>
+    <div class="buttons">
+      <a [routerLink]="['/play']" class="btn btn-dark">Play again</a>
+      <a [routerLink]="['/login']" class="btn btn-dark">Exit</a>
+    </div>
+
+  </div>
+
+  <div class="game">
+    <h2>Results</h2>
+    <ul class="results">
+      <li class="results__item" *ngFor="let user of users">
+        <span>Name: {{user.username}}</span>
+        <span>Score: {{user.results[0].score}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

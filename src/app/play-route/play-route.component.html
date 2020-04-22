@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="game">
+    <p>Time: {{time}}</p>
+
+    <div *ngIf="isStarted === false">
+      <button class="start" (click)="onStart()">
+        Start Game
+      </button>
+    </div>
+
+    <div *ngIf="isStarted === true">
+      <button class="click" (click)="onClick()">
+        Click
+      </button>
+    </div>
+  </div>
+
+
+</div>
