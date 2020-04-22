@@ -10,11 +10,21 @@
   </div>
 
   <div class="game">
-    <h2>Results</h2>
+    <h2>Users rating</h2>
     <ul class="results">
       <li class="results__item" *ngFor="let user of users">
         <span>Name: {{user.username}}</span>
         <span>Score: {{user.results[0].score}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="game">
+    <h2>My rating</h2>
+    <ul class="results">
+      <li class="results__item" *ngFor="let result of myResults">
+        <span>Date: {{result.date | date}}</span>
+        <span>Score: {{result.score}}</span>
       </li>
     </ul>
   </div>

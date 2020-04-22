@@ -10,7 +10,8 @@ import { ClickerService } from '../services/clicker.service';
 })
 export class ResultRouteComponent implements OnInit {
 
-  users
+  users;
+  myResults;
 
   constructor(
     public clicker: ClickerService,
@@ -20,6 +21,17 @@ export class ResultRouteComponent implements OnInit {
 
   ngOnInit(): void {
     this.users = this.auth.getUsers();
+    this.getMyResults();
+  }
+
+  getMyResults() {
+    this.auth.getUsers().forEach( item => {
+      if (item.username === this.auth.getUsername()) {
+        this.myResults = item.results;
+
+        return item.results;
+      }
+    })
   }
 
 }
